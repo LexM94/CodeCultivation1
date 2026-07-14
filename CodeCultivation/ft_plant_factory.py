@@ -6,17 +6,17 @@
 #    By: alex <alex@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/23 19:13:33 by alex              #+#    #+#              #
-#    Updated: 2026/06/24 01:39:15 by alex             ###   ########.fr        #
+#    Updated: 2026/07/14 02:02:39 by alex             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 class Plant:
-    def __init__(self, name, height, age):
+    def __init__(self, name: str, height: float, age: int) -> None:
         self.name = name
         self.height = height
         self.age = age
-    def show(self):
-        print(f"Created :   {self.name}: {round(self.height, 1)}cm, {self.age} days old")
+    def show(self) -> None:
+        print(f"{self.name}: {round(self.height, 1)}cm, {self.age} days old")
 if __name__ == "__main__":
     rose = Plant("Rose", 25.0, 30)
     oak = Plant("Oak", 200.0, 365)
@@ -25,6 +25,7 @@ if __name__ == "__main__":
     fern = Plant("Fern", 15.0, 120)
 
     print("=== Plant Factory Output ===")
+    print("Created: ", end="")
     rose.show()
     oak.show()
     cactus.show()
