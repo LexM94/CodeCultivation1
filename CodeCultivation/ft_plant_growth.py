@@ -1,30 +1,21 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    ft_plant_growth.py                                 :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: alex <alex@student.42.fr>                  +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/06/22 01:18:08 by alex              #+#    #+#              #
-#    Updated: 2026/07/14 01:47:33 by alex             ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 class Plant:
-    def __init__(self, name: str, height: float, age: int, growth: float) -> None:
+    def __init__(self, name: str, height: float,
+                 age: int, growth: float) -> None:
         self.name = name
         self.height = height
         self.age = age
         self.growth = growth
-    
+
     def grow(self) -> None:
         self.height = self.growth + self.height
-    
+
     def aging(self) -> None:
         self.age = self.age + 1
 
     def show(self) -> None:
         print(f"{self.name}: {round(self.height, 1)}cm, {self.age} days old")
+
+
 if __name__ == "__main__":
     rose = Plant("Rose", 25.0, 30, 0.8)
 
